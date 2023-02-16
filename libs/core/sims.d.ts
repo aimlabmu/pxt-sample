@@ -109,5 +109,14 @@ declare namespace sprites {
     function createSprite(): Sprite;
 
 }
+declare namespace aithaigen {
+    /**
+     * Send message to the AIThaiGen
+     */
+    //% blockId="sampleSend" block="send %msg"
+    //% shim=aithaigen::send
+    function send(msg: string): void;
+
+}
 
 // Auto-generated. Do not edit. Really.

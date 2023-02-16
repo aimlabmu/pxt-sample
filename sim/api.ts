@@ -154,3 +154,14 @@ namespace pxsim.sprites {
         return new Sprite();
     }
 }
+
+namespace pxsim.aithaigen {
+    /**
+     * Send message to the AIThaiGen
+     */
+    //% blockId="sampleSend" block="send %msg"
+    export function send(msg: string) {
+        board().sendMessage('hello', msg)
+    }
+
+}

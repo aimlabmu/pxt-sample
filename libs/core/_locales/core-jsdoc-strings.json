@@ -150,6 +150,7 @@
   "String.trim": "Return a substring of the current string with whitespace removed from both ends",
   "String@type": "Combine, split, and search text strings.",
   "StringMap": "A dictionary from string key to string values",
+  "aithaigen.send": "Send message to the AIThaiGen",
   "console.log": "Print out message",
   "hare.hop": "This is hop",
   "loops.forever": "Repeats the code forever in the background. On each iteration, allows other code to run.",

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../flow-spec-exp"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../pxt-holidays"
+		}
+	],
+	"settings": {}
+}

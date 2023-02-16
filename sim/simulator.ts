@@ -15,6 +15,20 @@ namespace pxsim {
         return runtime.board as Board;
     }
 
+    export interface ISimMessage {
+        type: "simulator.message";
+        key?: string;
+        data?: string;
+    }
+
+    const postContainerMessage = (message: pxsim.ISimMessage) => {
+        Runtime.postMessage({
+            type: "custom",
+            __proxy: "parent",
+            content: message
+        } as pxsim.SimulatorCustomMessage);
+    };
+
     /**
      * Represents the entire state of the executing program.
      * Do not store state anywhere else!
@@ -48,6 +62,23 @@ namespace pxsim {
 
             this.hareElement.cx.baseVal.value = this.hare.x;
             this.hareElement.cy.baseVal.value = this.hare.y;
+        }
+
+        public receiveMessage(msg: SimulatorMessage) {
+            switch (msg.type) {
+                case "helloFromAIThaiGen":
+                    console.log("Hello from AI Thai Gen");
+                    break;
+                default:
+            }
+        }
+
+        public sendMessage(key: string, data: string) {
+            postContainerMessage({
+                type: "simulator.message",
+                key: key,
+                data: data
+            } as pxsim.ISimMessage);
         }
     }
 }
